@@ -1,4 +1,4 @@
-
+/* -------------------- Sección de Docentes de la página principal  -------------------- */
 import React from "react";
 
 // reactstrap components
@@ -22,6 +22,7 @@ import {
 // core components
 
 function SectionLogin() {
+  //Función para mostrar la ventana modal
   const [modal, setModal] = React.useState(false);
   const toggleModal = () => {
     setModal(!modal);
@@ -31,6 +32,7 @@ function SectionLogin() {
       <Container>
         <Row>
           <Col md="8">
+            {/* -------------------- Barra de busqueda y botón de creación de solicitud  -------------------- */}
         <InputGroup>
             <InputGroupAddon addonType="prepend">
               <InputGroupText>
@@ -56,7 +58,7 @@ function SectionLogin() {
               >
                   <i className="fa fa-check" /> Solicitar Nuevo Docente
                 </Button>
-                {/* Modal */}
+                {/* --------------------- Ventana Modal ----------------------- */}
               <Modal isOpen={modal} toggle={toggleModal}>
                 <div className="modal-header  bg-dark">
                   <button
@@ -230,6 +232,7 @@ function SectionLogin() {
                   </CardFooter>
                 </Card>
               </Col>
+              {/* -------------------- Listado de Docentes  -------------------- */}
               <Col md="4">
                 <Card className="card-profile card-plain p-3">
                   <div className="card-avatar">

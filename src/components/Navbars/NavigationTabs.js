@@ -15,6 +15,7 @@ import {
   import SectionCarousel from "views/index-sections/SectionCarousel.js";
   import SectionForo from "views/index-sections/SectionForo.js";
   import SectionTeachers from "views/index-sections/SectionTeachers.js";
+  import SectionLogin from "views/index-sections/SectionLogin.js";
 
 function SectionProgress() {
     const [activeTab, setActiveTab] = React.useState("1");
@@ -71,6 +72,7 @@ function SectionProgress() {
                 <TabContent activeTab={activeTab} className="text-center m-0">
                   <TabPane tabId="1">
                   <SectionCarousel />
+                  <SectionLogin />
                   <IndexHeader />
                   </TabPane>
                   <TabPane tabId="2">

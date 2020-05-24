@@ -1,3 +1,4 @@
+// -------------------- Sección del carrusel de la página principal --------------------
 import React from "react";
 
 // reactstrap components
@@ -11,8 +12,7 @@ import {
   CarouselCaption
 } from "reactstrap";
 
-// core components
-
+//Titulos, descripciones e imagenes del carrusel
 const items = [
   {
     src: require("assets/img/soroush-karimi.jpg"),
@@ -32,6 +32,7 @@ const items = [
 ];
 
 function SectionCarousel() {
+  //Funcionamiento del carrusel
   const [activeIndex, setActiveIndex] = React.useState(0);
   const [animating, setAnimating] = React.useState(false);
   const onExiting = () => {
@@ -86,6 +87,7 @@ function SectionCarousel() {
                       </CarouselItem>
                     );
                   })}
+                  {/* Botones del carrusel */}
                   <a
                     className="left carousel-control carousel-control-prev"
                     data-slide="prev"

@@ -1,3 +1,4 @@
+// -------------------- Rutas --------------------
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
@@ -12,9 +13,8 @@ import ProfilePage from "views/examples/ProfilePage.js";
 import ProfileStudentPage from "views/examples/ProfileStudentPage.js";
 import ProfileTeacherPage from "views/examples/ProfileTeacherPage.js";
 import ProfileModeratorPage from "views/examples/ProfileModeratorPage.js";
-import LoginPage from "views/examples/LoginPage.js";
 import RegisterPage from "views/examples/RegisterPage.js";
-// others
+import ProfileAdminPage from "views/examples/ProfileAdminPage.js";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -29,10 +29,6 @@ ReactDOM.render(
         render={props => <RegisterPage {...props} />}
       />
       <Route
-        path="/login-page"
-        render={props => <LoginPage {...props} />}
-      />
-      <Route
         path="/profile-student-page"
         render={props => <ProfileStudentPage {...props} />}
       />
@@ -43,6 +39,10 @@ ReactDOM.render(
       <Route
         path="/profile-moderator-page"
         render={props => <ProfileModeratorPage {...props} />}
+      />
+      <Route
+        path="/profile-admin-page"
+        render={props => <ProfileAdminPage {...props} />}
       />
       <Redirect to="/index" />
     </Switch>

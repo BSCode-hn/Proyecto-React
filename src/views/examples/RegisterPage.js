@@ -1,28 +1,10 @@
-/*!
-
-=========================================================
-* Paper Kit React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/paper-kit-react
-
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/paper-kit-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 
 // reactstrap components
-import { Button, Card, Form, Input, Container, Row, Col } from "reactstrap";
+import { Button, Card, Form, Input, Container, Row, Col, FormGroup, Label } from "reactstrap";
 
 // core components
-import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
+import IndexNavbar from "components/Navbars/IndexNavbar.js";
 
 function RegisterPage() {
   document.documentElement.classList.remove("nav-open");
@@ -34,74 +16,87 @@ function RegisterPage() {
   });
   return (
     <>
-      <ExamplesNavbar />
+    <IndexNavbar />
       <div
         className="page-header"
         style={{
-          backgroundImage: "url(" + require("assets/img/login-image.jpg") + ")"
+          backgroundImage: "url(" + require("assets/img/unah-image.jpg") + ")"
         }}
       >
         <div className="filter" />
-        <Container>
-          <Row>
-            <Col className="ml-auto mr-auto" lg="4">
-              <Card className="card-register ml-auto mr-auto">
-                <h3 className="title mx-auto">Welcome</h3>
-                <div className="social-line text-center">
-                  <Button
-                    className="btn-neutral btn-just-icon mr-1"
-                    color="facebook"
-                    href="#pablo"
-                    onClick={e => e.preventDefault()}
-                  >
-                    <i className="fa fa-facebook-square" />
-                  </Button>
-                  <Button
-                    className="btn-neutral btn-just-icon mr-1"
-                    color="google"
-                    href="#pablo"
-                    onClick={e => e.preventDefault()}
-                  >
-                    <i className="fa fa-google-plus" />
-                  </Button>
-                  <Button
-                    className="btn-neutral btn-just-icon"
-                    color="twitter"
-                    href="#pablo"
-                    onClick={e => e.preventDefault()}
-                  >
-                    <i className="fa fa-twitter" />
-                  </Button>
-                </div>
+        <Container className="mt-3">
+          <Row className="example-page ">
+            <Col className="ml-auto mr-auto " md="10 ">
+              <Card className=" ml-auto mr-auto px-4">
+                <h3 className="title mx-auto">Registro</h3>
                 <Form className="register-form">
-                  <label>Email</label>
-                  <Input placeholder="Email" type="text" />
-                  <label>Password</label>
-                  <Input placeholder="Password" type="password" />
-                  <Button block className="btn-round" color="danger">
-                    Register
+                  <Row className="pb-2">
+                    <Col>
+                  <label className="text-white">Nombres</label>
+                  <Input placeholder="Nombres" type="text" />
+                  </Col>
+                  <Col>
+                  <label className="text-white">Apellidos</label>
+                  <Input placeholder="Apellidos" type="text" />
+                  </Col>
+                  <Col>
+                  <label className="text-white">Nicknname</label>
+                  <Input placeholder="Nicknname" type="text" />
+                  </Col>
+                  </Row>
+                  <Row className="pb-2">
+                  <Col>
+                  <label className="text-white">Número de Cuenta</label>
+                  <Input placeholder="# de Cuenta" type="number" />
+                  </Col>
+                  <Col>
+                  <label className="text-white">Carrera</label>
+                  <select class="form-control form-control-md">
+                    <option selected>Seleccione una carrera</option>
+                    <option >Carrera 1</option>
+                    <option >Carrera 2</option>
+                    <option >Carrera 3</option>
+                  </select>
+                  </Col>
+                  </Row>
+                  <Row className="pb-2">
+                    <Col>
+                  <label className="text-white">Email</label>
+                  <Input placeholder="Email" type="email" />
+                  </Col>
+                  <Col>
+                  <label className="text-white">Contraseña</label>
+                  <Input placeholder="Contraseña" type="password" />
+                  </Col>
+                  <Col>
+                  <label className="text-white">Confirmar Contraseña</label>
+                  <Input placeholder="Confirmar Contraseña" type="password" />
+                  </Col>
+                  </Row>
+                  <Row>
+                  <FormGroup check className="mr-auto ml-auto py-3">
+                            <Label className="text-white" check>
+                              Acepto los terminos y condiciones
+                              <Input
+                                defaultValue=""
+                                type="checkbox"
+                                color="danger"
+                              />
+                              <span className="form-check-sign" />
+                            </Label>
+                          </FormGroup>
+                          </Row>
+                  <Row>
+                  <Button block className="btn-round mb-4 " color="danger">
+                    Registrarme
                   </Button>
+                  </Row>
+                 
                 </Form>
-                <div className="forgot">
-                  <Button
-                    className="btn-link"
-                    color="danger"
-                    href="#pablo"
-                    onClick={e => e.preventDefault()}
-                  >
-                    Forgot password?
-                  </Button>
-                </div>
               </Card>
             </Col>
           </Row>
         </Container>
-        <div className="footer register-footer text-center">
-          <h6>
-            © {new Date().getFullYear()}, made with{" "}
-            <i className="fa fa-heart heart" /> by Creative Tim
-          </h6>
-        </div>
       </div>
     </>
   );

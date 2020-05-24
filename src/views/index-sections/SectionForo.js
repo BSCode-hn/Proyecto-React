@@ -1,4 +1,4 @@
-
+//Sección del foro llamada desde la barra de navegación
 import React from "react";
 
 // reactstrap components
@@ -23,6 +23,7 @@ import {
 // core components
 
 function SectionLogin() {
+  //Funcionamiento de la barra interna de navegación
   const [activeTab, setActiveTab] = React.useState("1");
 
   const toggle = tab => {
@@ -35,9 +36,10 @@ function SectionLogin() {
       <hr/>
         <Container>
           <Row>
+            {/*Tabs de la barra interna de navegación*/}
           <div className="nav-tabs-navigation mx-auto">
             <div className="nav-tabs-wrapper">
-              <Nav tabs>
+              <Nav  tabs>
                 <NavItem >
                   <NavLink
                     className={activeTab === "1" ? "active" : ""}
@@ -76,6 +78,7 @@ function SectionLogin() {
           <hr/>
           <TabContent activeTab={activeTab} className="text-center m-0">
                   <TabPane tabId="1">
+                    {/* -------------------- FORO NUEVO  -------------------- */}
                   <Row>
             <Col className="mx-auto" lg="4" md="6">
               <Card className="card-register">
@@ -121,6 +124,7 @@ function SectionLogin() {
           </Row>
                   </TabPane>
                   <TabPane tabId="2">
+                    {/* -------------------- FOROS RECIENTES  -------------------- */}
                   <Row>
             <Col md="12">
           <Row className="example-page">
@@ -135,7 +139,8 @@ function SectionLogin() {
                   />
                 </Col>
                 <Col md="6" sm="9">
-                <h4 className="mt-3 text-left text-white">Nombre del Estudiante</h4>
+                <h4 className="mt-3 text-left text-white">Título del Foro</h4>
+                <h6 className="mt-3 text-left text-white">Nombre del Docente</h6>
                 </Col>
                 <Col md="4" className="mt-3">
                 <i className="nc-icon nc-trophy text-white p-1" /> 
@@ -290,6 +295,7 @@ function SectionLogin() {
           </Row>
                   </TabPane>
                   <TabPane tabId="3">
+                    {/* -------------------- FOROS ANTIGUOS  -------------------- */}
                   <Row>
             <Col md="12">
           <Row className="example-page">
@@ -304,7 +310,8 @@ function SectionLogin() {
                   />
                 </Col>
                 <Col md="6" sm="9">
-                <h4 className="mt-3 text-left text-white">Nombre del Estudiante</h4>
+                <h4 className="mt-3 text-left text-white">Título del Foro</h4>
+                <h6 className="mt-3 text-left text-white">Nombre del Docente</h6>
                 </Col>
                 <Col md="4" className="mt-3">
                 <i className="nc-icon nc-trophy text-white p-1" /> 

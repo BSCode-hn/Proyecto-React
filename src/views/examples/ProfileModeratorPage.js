@@ -1,4 +1,4 @@
-
+/* -------------------- Perfil del moderador  -------------------- */
 import React from "react";
 
 // reactstrap components
@@ -39,6 +39,7 @@ function ProfilePage() {
   });
   return (
     <>
+    {/* -------------------- HEADER -------------------- */}
       <IndexNavbar />
       <ProfilePageHeader />
       <div className="section profile-content">
@@ -70,7 +71,7 @@ function ProfilePage() {
           
             <Col className="mx-auto text-center" md="4">
           <br />
-
+          {/* -------------------- TABS -------------------- */}
           <div className="nav-tabs-navigation">
             <div className="nav-tabs-wrapper">
               <Nav tabs>
@@ -100,7 +101,7 @@ function ProfilePage() {
           </div>
           </Col>
           </Row>
-          {/* Tab panes */}
+          {/* --------------------- Tab panes ----------------------- */}
           <TabContent className="following" activeTab={activeTab}>
             <TabPane className="text-center" tabId="2" id="discutions">
               <h3 className="text-muted">No hay reportes :)</h3>
@@ -110,6 +111,7 @@ function ProfilePage() {
               </Button>
             </TabPane>
             <TabPane className="text-center" tabId="1" id="comments">
+              {/* -------------------- LISTADO DE FOROS  -------------------- */}
             <Container>
           <Row className="example-page">
             <Col className="text-center ml-auto mr-auto" md="10">
