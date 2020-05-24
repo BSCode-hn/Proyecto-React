@@ -14,6 +14,7 @@ import {
   import IndexHeader from "components/Headers/IndexHeader.js";
   import SectionCarousel from "views/index-sections/SectionCarousel.js";
   import SectionForo from "views/index-sections/SectionForo.js";
+  import SectionTeachers from "views/index-sections/SectionTeachers.js";
 
 function SectionProgress() {
     const [activeTab, setActiveTab] = React.useState("1");
@@ -77,6 +78,7 @@ function SectionProgress() {
                     
                   </TabPane>
                   <TabPane tabId="3">
+                  <SectionTeachers />
                   </TabPane>
                 </TabContent>
               </Col>
