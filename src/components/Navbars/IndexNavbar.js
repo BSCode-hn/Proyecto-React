@@ -34,13 +34,13 @@ function IndexNavbar() {
   React.useEffect(() => {
     const updateNavbarColor = () => {
       if (
-        document.documentElement.scrollTop > 299 ||
-        document.body.scrollTop > 299
+        document.documentElement.scrollTop > 99 ||
+        document.body.scrollTop > 99
       ) {
         setNavbarColor("");
       } else if (
-        document.documentElement.scrollTop < 300 ||
-        document.body.scrollTop < 300
+        document.documentElement.scrollTop < 100 ||
+        document.body.scrollTop < 100
       ) {
         setNavbarColor("bg-dark");
       }
@@ -59,7 +59,6 @@ function IndexNavbar() {
           <NavbarBrand
             data-placement="bottom"
             href="/index"
-            target="_blank"
             title="Coded by Creative Tim"
           >
             UNAHXPERIENCE

@@ -12,7 +12,7 @@ import {
   Container,
   Row,
   Col,
-  Card
+  Card,
 } from "reactstrap";
 
 // core components
@@ -24,7 +24,7 @@ function ProfilePage() {
   const [activeTab, setActiveTab] = React.useState("1");
 
   const toggle = tab => {
-    if (activeTab !== 1) {
+    if (activeTab !== tab) {
       setActiveTab(tab);
     }
   };
@@ -57,32 +57,25 @@ function ProfilePage() {
               
             </div>
           </div>
-          <Row>
-            <Col className="ml-auto mr-auto text-center" md="6">
+            <Col className="ml-auto mr-auto text-center" md="12">
             <h6 className="description">Docente</h6>  
-              <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, atque iste ad ipsum autem nostrum sed dicta, veritatis incidunt nemo officia voluptas optio quos sint 
-              </p>
-              <br />
+            
+                <i className="nc-icon nc-trophy  p-1" /> 
+                <i className="nc-icon nc-trophy  p-1" /> 
+                <i className="nc-icon nc-trophy  p-1" /> 
+                <i className="nc-icon nc-trophy  p-1" /> 
+                <i className="nc-icon nc-trophy  p-1" /> 
+                <i className="nc-icon nc-trophy  p-1" /> 
+            
+            <br />
             </Col>
-            <Col className="ml-auto mr-auto text-center" md="6">
-            <h6 className="description"><i className="nc-icon nc-calendar-60" />  Cumpleaños</h6>  
-            <h6 className="description"><i className="nc-icon nc-favourite-28" />  Votos a Favor</h6>  
-            <h6 className="description"><i className="nc-icon nc-circle-10" />  Cuando se unió</h6>  
-          
-            </Col>
-          </Row>
           <Row>
-            <Col className="ml-auto mr-auto text-center" md="4">
-                <Button className="btn-round" color="default" outline>
-                  <i className="fa fa-cog" /> Editar Perfil
-                </Button>
-          
+            <Col className="ml-auto mr-auto text-center" md="2">
           <br />
 
           <div className="nav-tabs-navigation">
             <div className="nav-tabs-wrapper">
-              <Nav tabs>
+              <Nav  tabs>
                 <NavItem>
                   <NavLink
                     className={activeTab === "1" ? "active" : ""}
@@ -93,17 +86,6 @@ function ProfilePage() {
                     Comentarios 
                   </NavLink>
                 </NavItem>
-                <NavItem>
-                  <NavLink
-                    className={activeTab === "2" ? "active" : ""}
-                    onClick={() => {
-                      toggle("2");
-                    }}
-                  >
-                    Discuciones
-                  </NavLink>
-                </NavItem>
-               
               </Nav>
             </div>
           </div>
@@ -111,42 +93,41 @@ function ProfilePage() {
           </Row>
           {/* Tab panes */}
           <TabContent className="following" activeTab={activeTab}>
-            <TabPane className="text-center" tabId="2" id="discutions">
-              <h3 className="text-muted">No hay discuciones :(</h3>
-              <Button className="btn-round" color="warning">
-                Encontrar discuciones
-              </Button>
-            </TabPane>
+            
             <TabPane className="text-center" tabId="1" id="comments">
             <Container>
+          <Row>
+            <Col md="8">
           <Row className="example-page">
-            <Col className="text-center ml-auto mr-auto" md="10">
+            <Col className="text-center mr-auto" md="12">
             <Card className=" ml-auto mr-auto">
-                <h3 className="title mx-auto text-white">Titulo del Foro</h3>
-                <h6 className="text-white">Comentarios 22</h6>
-                <Row className=" ml-auto mr-auto">
-                <i className="nc-icon nc-trophy text-white p-1" /> 
-                <i className="nc-icon nc-trophy text-white p-1" /> 
-                <i className="nc-icon nc-trophy text-white p-1" /> 
-                <i className="nc-icon nc-trophy text-white p-1" /> 
-                <i className="nc-icon nc-trophy text-white p-1" /> 
-                <i className="nc-icon nc-trophy text-white p-1" /> 
-                </Row>
-                
-              <Row className="p-3">
-                <Col className="mr-auto p-2" md="2" sm="3">
+            <Row className="pt-3 px-3">
+                <Col md="2" sm="3">
                   <img
                     alt="..."
                     className="img-thumbnail img-responsive border-0 p-0"
                     src={require("assets/img/faces/erik-lucatero-2.jpg")}
                   />
                 </Col>
+                <Col md="6" sm="9">
+                <h4 className="mt-3 text-left text-white">Nombre del Estudiante</h4>
+                </Col>
+                <Col md="4" className="mt-3">
+                <i className="nc-icon nc-trophy text-white p-1" /> 
+                <i className="nc-icon nc-trophy text-white p-1" /> 
+                <i className="nc-icon nc-trophy text-white p-1" /> 
+                <i className="nc-icon nc-trophy text-white p-1" /> 
+                <i className="nc-icon nc-trophy text-white p-1" /> 
+                <i className="nc-icon nc-trophy text-white p-1" /> 
+                </Col>
+              </Row>
+                
                 <Col className="mr-auto p-2">
+                <h6 className=" text-center text-white">Comentario</h6>
                 <p className="text-white">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, atque iste ad ipsum autem nostrum sed dicta, veritatis incidunt nemo officia voluptas optio quos sint ad ipsum autem nostrum sed dicta, veritatis incidunt nemo officia voluptas optio quos sint 
                 </p>
                 </Col>
-              </Row>
                   <div className="social-line text-center p-3">
                   <Button
                     className="btn-neutral btn-just-icon mr-1"
@@ -172,43 +153,51 @@ function ProfilePage() {
                   >
                     <i className="fa fa-pencil" />
                   </Button>
+                  <Button
+                    className="btn-neutral btn-just-icon ml-1"
+                    color="success"
+                    href="#pablo"
+                    onClick={e => e.preventDefault()}
+                  >
+                    <i className="fa fa-times" />
+                    </Button>
                   <Button className="btn-round ml-2" color="danger" outline>
-                  <i className="fa fa-eye" /> Ver Publicación
+                  <i className="fa fa-ban" /> Reportar
                 </Button>
                 </div>
               </Card>
             </Col>
           </Row>
-        </Container>
-            <Container>
           <Row className="example-page">
-            <Col className="text-center ml-auto mr-auto" md="10">
+            <Col className="text-center mr-auto" md="12">
             <Card className=" ml-auto mr-auto">
-                <h3 className="title mx-auto text-white">Titulo del Foro</h3>
-                <h6 className="text-white">Comentarios 22</h6>
-                <Row className=" ml-auto mr-auto">
-                <i className="nc-icon nc-trophy text-white p-1" /> 
-                <i className="nc-icon nc-trophy text-white p-1" /> 
-                <i className="nc-icon nc-trophy text-white p-1" /> 
-                <i className="nc-icon nc-trophy text-white p-1" /> 
-                <i className="nc-icon nc-trophy text-white p-1" /> 
-                <i className="nc-icon nc-trophy text-white p-1" /> 
-                </Row>
-                
-              <Row className="p-3">
-                <Col className="mr-auto p-2" md="2" sm="3">
+            <Row className="pt-3 px-3">
+                <Col md="2" sm="3">
                   <img
                     alt="..."
                     className="img-thumbnail img-responsive border-0 p-0"
                     src={require("assets/img/faces/erik-lucatero-2.jpg")}
                   />
                 </Col>
+                <Col md="6" sm="9">
+                <h4 className="mt-3 text-left text-white">Nombre del Estudiante</h4>
+                </Col>
+                <Col md="4" className="mt-3">
+                <i className="nc-icon nc-trophy text-white p-1" /> 
+                <i className="nc-icon nc-trophy text-white p-1" /> 
+                <i className="nc-icon nc-trophy text-white p-1" /> 
+                <i className="nc-icon nc-trophy text-white p-1" /> 
+                <i className="nc-icon nc-trophy text-white p-1" /> 
+                <i className="nc-icon nc-trophy text-white p-1" /> 
+                </Col>
+              </Row>
+                
                 <Col className="mr-auto p-2">
+                <h6 className=" text-center text-white">Comentario</h6>
                 <p className="text-white">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, atque iste ad ipsum autem nostrum sed dicta, veritatis incidunt nemo officia voluptas optio quos sint ad ipsum autem nostrum sed dicta, veritatis incidunt nemo officia voluptas optio quos sint 
                 </p>
                 </Col>
-              </Row>
                   <div className="social-line text-center p-3">
                   <Button
                     className="btn-neutral btn-just-icon mr-1"
@@ -234,10 +223,28 @@ function ProfilePage() {
                   >
                     <i className="fa fa-pencil" />
                   </Button>
+                  <Button
+                    className="btn-neutral btn-just-icon ml-1"
+                    color="success"
+                    href="#pablo"
+                    onClick={e => e.preventDefault()}
+                  >
+                    <i className="fa fa-times" />
+                  </Button>
                   <Button className="btn-round ml-2" color="danger" outline>
-                  <i className="fa fa-eye" /> Ver Publicación
+                  <i className="fa fa-ban" /> Reportar
                 </Button>
                 </div>
+              </Card>
+            </Col>
+          </Row>
+          </Col>
+          <Col md="4">
+            <Card className="card-register ml-auto mr-auto mt-0">
+                <h3 className="title mx-auto text-white">Información del Docente</h3>
+                <p className="text-white">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, atque iste ad ipsum autem nostrum sed dicta, veritatis incidunt nemo officia voluptas optio quos sint ad ipsum autem nostrum sed dicta, veritatis incidunt nemo officia voluptas optio quos sint 
+                </p>
               </Card>
             </Col>
           </Row>

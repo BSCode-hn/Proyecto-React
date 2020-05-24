@@ -11,6 +11,10 @@ import {
     Col
   } from "reactstrap";
 
+  import IndexHeader from "components/Headers/IndexHeader.js";
+  import SectionCarousel from "views/index-sections/SectionCarousel.js";
+  import SectionForo from "views/index-sections/SectionForo.js";
+
 function SectionProgress() {
     const [activeTab, setActiveTab] = React.useState("1");
     const toggle = tab => {
@@ -20,8 +24,9 @@ function SectionProgress() {
     };
     return (
       <>
-        <div className="section pb-0">
-          <Container className="pl-0 ml-0">
+      
+        <div className="section pb-0 m-0">
+          <Container className="pl-0">
             <br />
             <Row >
               <Col md="12">
@@ -62,10 +67,14 @@ function SectionProgress() {
                     </Nav>
                   </div>
                 </div>
-                <TabContent activeTab={activeTab} className="text-center">
+                <TabContent activeTab={activeTab} className="text-center m-0">
                   <TabPane tabId="1">
+                  <SectionCarousel />
+                  <IndexHeader />
                   </TabPane>
                   <TabPane tabId="2">
+                  <SectionForo />
+                    
                   </TabPane>
                   <TabPane tabId="3">
                   </TabPane>
@@ -74,6 +83,7 @@ function SectionProgress() {
             </Row>
           </Container>
         </div>{" "}
+        
       </>
     );
   }
