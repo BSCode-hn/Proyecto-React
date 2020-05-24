@@ -1,7 +1,5 @@
 # [Paper Kit React - UNAHXPERIENCE](https://demos.creative-tim.com/paper-kit-react/#/index?ref=pkr-github-readme) ![version](https://img.shields.io/badge/version-1.0.0-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/material-kit.svg?maxAge=2592000)](https://github.com/creativetimofficial/paper-kit-react/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/paper-kit-react.svg?maxAge=2592000)](https://github.com/creativetimofficial/paper-kit-react/issues?q=is%3Aissue+is%3Aclosed) [![Join the chat at https://gitter.im/NIT-dgp/General](https://badges.gitter.im/NIT-dgp/General.svg)](https://gitter.im/creative-tim-general/Lobby) [![Chat](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://discord.gg/E4aHAQy)
 
-![Paper Kit React](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/paper-kit-react/opt_pk_react_thumbnail.jpg)
-
 Paper Kit React is a free Bootstrap 4, React, React Hooks and Reactstrap UI Kit with pale colors, beautiful typography and thoughtful drawings. We've created it having paper and drawings in mind.
 
 Any elements that is vital to code a web project is already here, fully coded. All components are fully responsive and look great on every screen size. Transitions, shadows, colors, they all resemble the flow you would have using pieces of paper.
@@ -45,18 +43,6 @@ Once you download the archive, you will be able find a tutorial page inside it e
 * [Reporting Issues](#reporting-issues)
 * [Licensing](#licensing)
 * [Useful Links](#useful-links)
-
-## Versions
-
-| HTML | Angular | React |
-| --- | --- | --- |
-| [![Paper Kit 2 HTML](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/paper-kit-2-html/opt_pk2_thumbnail.jpg)](https://www.creative-tim.com/product/paper-kit-2?ref=pkr-github-readme)  | [![Paper Kit 2 Angular](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/paper-kit-2-angular/opt_pk2_angular_thumbnail.jpg)](https://www.creative-tim.com/product/paper-kit-2-angular?ref=pkr-github-readme)  | [![Paper Kit  React](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/paper-kit-react/opt_pk_react_thumbnail.jpg)](https://www.creative-tim.com/product/paper-kit-react?ref=pkr-github-readme)  
-
-| Register Page | Landing Page | Profile Page  |
-| --- | --- | ---  |
-| [![Register Page](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/paper-kit-react/register.png)](https://demos.creative-tim.com/paper-kit-react/#/register-page?ref=pkr-github-readme)  | [![Landing Page](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/paper-kit-react/landing.png)](https://demos.creative-tim.com/paper-kit-react/#/landing-page?ref=pkr-github-readme)  | [![Profile Page](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/paper-kit-react/profile.png)](https://demos.creative-tim.com/paper-kit-react/#/profile-page?ref=pkr-github-readme)  
-
-[View More](https://demos.creative-tim.com/paper-kit-react/#/index?ref=pkr-github-readme)
 
 ## Quick start
 
@@ -159,12 +145,6 @@ At present, we officially aim to support the last two versions of the following 
 - Issues: [Github Issues Page](https://github.com/creativetimofficial/paper-kit-react/issues)
 
 
-**Dashboards:**
-
-| HTML | React | Vue  | Angular |
-| --- | --- | ---  | ---  |
-| [![Paper Dashboard  HTML](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/paper-dashboard-2-html/opt_pd2_thumbnail.jpg)](https://www.creative-tim.com/product/paper-dashboard-2?ref=pkr-github-readme) | [![Paper Dashboard  React](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/paper-dashboard-react/opt_pd_react_thumbnail.jpg)](https://www.creative-tim.com/product/paper-dashboard-pro-react?ref=pkr-github-readme) | [![Vue Paper Dashboard](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/vue-paper-dashboard/opt_pd_vue_thumbnail.jpg)](https://www.creative-tim.com/product/vue-paper-dashboard?ref=pkr-github-readme)  | [![ Paper Dashboard Angular](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/paper-kit-2-angular/opt_pk2_angular_thumbnail.jpg)](https://www.creative-tim.com/product/paper-dashboard-angular?ref=pkr-github-readme)
-
 ## Reporting Issues
 
 We use GitHub Issues as the official bug tracker for the Paper Kit 2. Here are some advices for our users that want to report an issue:
@@ -172,13 +152,6 @@ We use GitHub Issues as the official bug tracker for the Paper Kit 2. Here are s
 1. Make sure that you are using the latest version of the Paper Kit 2. Check the CHANGELOG from your dashboard on our [website](https://www.creative-tim.com/?ref=pkr-github-readme).
 2. Providing us reproducible steps for the issue will shorten the time it takes for it to be fixed.
 3. Some issues may be browser specific, so specifying in what browser you encountered the issue might help.
-
-## Licensing
-
-- Copyright 2019 Creative Tim (https://www.creative-tim.com/?ref=pkr-github-readme)
-
-[CHANGELOG]: ./CHANGELOG.md
-[LICENSE]: ./LICENSE.md
 
 ## Useful Links
 
